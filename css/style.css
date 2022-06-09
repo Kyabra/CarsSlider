@@ -1,0 +1,271 @@
+/* reset css  */
+*, ::before,::after {
+    box-sizing: border-box; /* Calculeaza bordurile si paddingul in lungimea si largimea elementelor */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background:  #333;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+   
+}
+
+.grid {
+    display: grid;
+    grid-template:repeat(8, 122px) 1fr / repeat(10, 160px) 1fr;
+    height: 100vh;
+    width: 100vw;
+    
+
+}
+
+.left {
+    /* debRang / debCol / finRang / finCol */
+    grid-area: 1 / 1 / -1 / 7 ;
+    display: grid;
+    grid-template: repeat(8, 122px) 1fr / repeat(6, 160px);
+    background: rgb(221,221,221)
+}
+
+.contCube {
+    /* Div de placement */
+    /* debRang / debCol / finRang / finCOl*/
+    grid-area: 1 / 1 / 3 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cubeTopL {
+    font-size: 30px;
+    text-transform: uppercase;
+    height: 125px;
+    width: 225px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+}
+
+.twinBar {
+    grid-area: 1 / 3/ 3 / 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bar {
+    width: 175px;
+    height: 5px;
+    background: #333;
+    border-radius: 5px;
+}
+
+.bar1 {
+    margin-left: 100px;
+}
+
+.st1 {
+    padding-left: 115px;
+}
+
+.sTitle {
+    grid-area: 3 / 2 / 5/ 7;
+    font-family: 'Abril Fatface';
+    font-size: 50px;
+    color: rgb(36, 36, 36);
+    margin-right: 5px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.textLeft{
+    grid-area: 4 / 2 / 5 / 6;
+    padding-top: 20px;
+    padding-left: 118px;
+}
+
+.title {
+    grid-area: 6 / 2 / 8 / 7 ;
+    font-family: 'Abril Fatface';
+    font-size: 130px;
+    color: rgb(36, 36, 36);
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.subTitle {
+    font-size: 13px;
+    font-family: 'Poppins'!important;
+    padding-left: 35px;
+    color: rgb(36, 36, 36);
+}
+
+/* right container with cars */
+.right{
+    grid-area: 1 / 7 / -1 / 13;
+    display: grid;
+    grid-template: repeat(8, 122px) 1fr / repeat(6, 160px);
+    overflow: hidden;
+}
+
+.r1 {
+    background: url(../ressources/bmw507.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 80%;
+}
+
+.boxBtns {
+    grid-area: 4 / 1 / 6 / 3;
+    display: flex;
+    padding-left: 15px;
+}
+
+.btn {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: rgb(218, 218, 218);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.btn--blue{
+    color: #3134f8;
+}
+
+.btn--blue:hover {
+background: rgb(144, 181, 223);
+border: 1px solid rgb(72, 100, 119);
+/* animation: denied 0.4s forwards; */
+}
+
+.btnD{
+    align-self: flex-end;
+}
+
+.mediumT {
+    grid-area: 1 / 1 / 4 / -1;
+    font-family: 'Abril Fatface';
+    font-size: 130px;
+    color: #f1f1f1;
+    margin: 0;
+    padding-left: 15px;
+    line-height: 160px;
+}
+
+.r2{
+    background: url(../ressources/ferrari.jpg);
+    background-size: 2060px 1304px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 60% 30%;
+}
+
+.t2 {
+    font-size: 90px;
+    color: #be1d01;
+}
+
+.st2{
+    padding-left: 115px;
+    color: #be1d01;
+}
+
+.mt2 {
+    color: #be1d01;
+}
+
+.r3 {
+    background: url(../ressources/porsche.jpg);
+    background-size: cover; 
+    background-position: 65% 50%;
+}
+
+.t3{
+    font-size: 70px;
+    color: #3134f8;
+}
+
+.st3{
+    color: #3134f8;
+    padding-left: 90px;
+}
+
+.tl3 {
+    margin-left: -25px;
+}
+
+.stxt3{
+    padding-left: 0;
+}
+
+.b3{
+    grid-area: 2 / 1 / 4 / 3;
+}
+
+.animBtn {
+    animation: denied 0.4s forwards;
+}
+
+@keyframes denied {
+    0% {
+        transform: translateX(0px);
+        background: rgb(218, 218, 218);
+    }
+    
+    20% {
+        transform: translateX(-5px);
+    }
+
+    40%{
+        transform: translateX(5px);
+        background: #ff7569;
+    }
+
+    60%{
+        transform: translateX(-5px);
+    }
+
+    80%{
+        transform: translateX(5px);
+    }
+
+    100%{
+        transform: translateX(0px);
+        background: rgb(218, 218, 218);
+    }
+}
+
+.animBtnGood{
+    animation: good 0.3s forwards;
+}
+
+@keyframes good {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+        background-color: rgb(175,175,175);
+    }
+    10%{
+        transform: scale(1);
+    }
+}
+
+
